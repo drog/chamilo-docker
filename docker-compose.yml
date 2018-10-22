@@ -5,7 +5,7 @@ services:
   camilo:
     restart: always
     privileged: true
-    image: opsforge/chamilo-docker:latest
+    build: ./dockerimage
     ports:
       - 8001:80
     links:

@@ -5,11 +5,11 @@ if [ "$(ls -A /var/www/html)" ]; then
 else
    echo "Chamilo not installed - deploying."
    cd /var/www/html
-   wget https://github.com/chamilo/chamilo-lms/releases/download/v1.10.8/chamilo-lms-1.10.8.tar.gz
-   tar xvf chamilo-lms-1.10.8.tar.gz
-   mv chamilo-lms*/* ./
-   rm -rf chamilo-lms-1.10.8.tar.gz
-   rm -rf chamilo-lms-1.10.8
+   wget https://github.com/chamilo/chamilo-lms/releases/download/v1.11.8/chamilo-1.11.8-php5.tar.gz
+   tar xvf chamilo-1.11.8-php5.tar.gz
+   mv chamilo-1.11.8-php5*/* ./
+   rm -rf chamilo-1.11.8-php5.tar.gz
+   rm -rf chamilo-1.11.8-php5
    sudo chown -R root:root ./
    sudo chmod -R 0777 ./
 fi
