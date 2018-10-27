@@ -2,23 +2,21 @@ version: '2'
 
 services:
 
-  camilo:
+  chamilo:
     restart: always
-    privileged: true
     build: ./dockerimage
     ports:
       - 8001:80
-    links:
-      - camilo-mysql:mysql
     volumes:
-      - /home/vagrant/chamilo-docker/chamilo-1.11.8-php5/:/var/www/html/
+      - ./chamilo:/var/www/html/
 
-  camilo-mysql:
+  chamilo-mysql:
     restart: always
     image: mysql:5.5
     environment:
-      - MYSQL_ROOT_PASSWORD=Standard1
+      MYSQL_ROOT_PASSWORD: Standard1
+      MYSQL_DATABASE: chamilo
     ports:
-      - 8306:3306
+      - 3306:3306
     volumes:
-      - /home/vagrant/chamilo-docker/mysql/:/var/lib/mysql/
+      - ./mysql-data:/var/lib/mysql/

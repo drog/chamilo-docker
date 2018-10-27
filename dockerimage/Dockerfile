@@ -6,10 +6,6 @@ MAINTAINER opsforge.io
 LABEL name="chamilo"
 LABEL version="0.1.0"
 
-EXPOSE 80
-
-VOLUME ["/var/www/html"]
-
 RUN apt-get update && \
     apt-get install wget libicu-dev libjpeg-dev libpng-dev libfreetype6-dev -y && \
     apt-get clean

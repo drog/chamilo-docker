@@ -10,8 +10,8 @@ else
    mv chamilo-1.11.8-php5*/* ./
    rm -rf chamilo-1.11.8-php5.tar.gz
    rm -rf chamilo-1.11.8-php5
-   sudo chown -R root:root ./
-   sudo chmod -R 0777 ./
+   chown -R root:root ./
+   chmod -R 0777 ./
 fi
 
 /bin/bash -c 'a2enmod rewrite; apache2-foreground'
